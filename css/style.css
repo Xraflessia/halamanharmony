@@ -1127,10 +1127,16 @@ blockquote {
 }
 /* Gaya untuk gambar batik */
 .batik-image {
-    width: 100%; /* Mengatur lebar gambar agar responsif */
+    /* width: 100%; Mengatur lebar gambar agar responsif */
+    /* height: auto; Menjaga rasio aspek gambar */
+    /* border-radius: 0; Menghilangkan sudut melengkung, menjadikannya kotak */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /*Menambahkan bayangan halus */
+    display: block; /* Menampilkan gambar sebagai elemen blok */
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar elemen induknya */
     height: auto; /* Menjaga rasio aspek gambar */
-    border-radius: 0; /* Menghilangkan sudut melengkung, menjadikannya kotak */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+    border-radius: 0 !important; /* Pastikan sudut gambar tidak melengkung */
+    border: none; /* Menghilangkan border */
+    box-shadow: none; /* Menghilangkan bayangan */
 }
 
 /* Gaya untuk deskripsi batik */
@@ -1603,8 +1609,7 @@ footer {
 .client-overlay {
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top;
-    0;
+    top: 0;  /* Perbaikan pada bagian ini */
     right: 0;
     bottom: 0;
     left: 0;
